@@ -4,7 +4,6 @@ import { COLORS, FONTS, MOBILE_BREAKPOINT } from "../../assets/styles";
 export default {
   Container: styled.div`
     min-width: 255px;
-    height: 100vh;
     padding-top: 69px;
     display: flex;
     flex-direction: column;

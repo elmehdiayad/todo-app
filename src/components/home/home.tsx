@@ -1,24 +1,25 @@
-import React, { FunctionComponent, useState } from "react";
+import React, { FunctionComponent } from "react";
 import Todo, { TodoProps } from "../common/todo/todo";
-import { TODOS } from "./data.constant";
 import TodoForm from "./form";
 import Styles from "./home.styles";
+import { useSelector } from "react-redux";
+
+const selectTodos = (state: any) => state.todos;
 
 const Home: FunctionComponent = () => {
-  const [todos, setTodos] = useState<Array<TodoProps>>(TODOS);
-
-  const addTodo = (todo: TodoProps): void => {
-    const new_todos = todos.concat(todo);
-    console.log(new_todos);
-    setTodos(new_todos);
-  };
+  const todos = useSelector(selectTodos);
 
   return (
     <Styles.Container>
-      <TodoForm addTodo={addTodo} />
+      <TodoForm />
       <Styles.Todos>
-        {todos.map((todo: TodoProps, index) => (
-          <Todo key={index} title={todo.title} description={todo.description} />
+        {todos.map((todo: TodoProps) => (
+          <Todo
+            key={todo.id}
+            id={todo.id}
+            title={todo.title}
+            description={todo.description}
+          />
         ))}
       </Styles.Todos>
     </Styles.Container>

@@ -2,7 +2,7 @@ import React, { FunctionComponent } from "react";
 import Styles from "./todo.styles";
 
 export interface TodoProps {
-  id?: number;
+  id: number;
   title: string;
   description?: string;
 }
