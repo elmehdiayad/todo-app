@@ -1,12 +1,13 @@
 import React, { FunctionComponent } from "react";
 import Styles from "./todo.styles";
 
-interface Props {
+export interface TodoProps {
+  id?: number;
   title: string;
   description?: string;
 }
 
-const Todo: FunctionComponent<Props> = ({ title, description }) => (
+const Todo: FunctionComponent<TodoProps> = ({ title, description }) => (
   <Styles.Container>
     <Styles.Title>{title}</Styles.Title>
     <Styles.Description>{description}</Styles.Description>

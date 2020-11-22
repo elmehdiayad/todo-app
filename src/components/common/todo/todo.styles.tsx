@@ -5,6 +5,7 @@ export default {
   Container: styled.div`
     ${containerStyle}
     padding: 16px;
+    margin-bottom: 11px;
   `,
   Title: styled.div`
     font-family: ${FONTS.SEGOE_UI};
