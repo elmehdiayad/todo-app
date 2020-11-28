@@ -6,7 +6,7 @@ const Menu: FunctionComponent = () => (
   <Styles.Container>
     <Styles.MenuItem.Container>
       <Styles.MenuItem.Icon src={home} alt="Accueil" />
-      <Styles.MenuItem.Text>Accueil</Styles.MenuItem.Text>
+      <Styles.MenuItem.Text to="/">Accueil</Styles.MenuItem.Text>
     </Styles.MenuItem.Container>
   </Styles.Container>
 );

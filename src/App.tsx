@@ -1,16 +1,12 @@
 import React, { FunctionComponent } from "react";
-import Styles from "./App.styles";
-import Header from "./components/header/header";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./components/home/home";
-import Menu from "./components/menu/menu";
 
 const App: FunctionComponent = () => (
-  <>
-    <Header />
-    <Styles.Body>
-      <Menu />
-      <Home />
-    </Styles.Body>
-  </>
+  <BrowserRouter>
+    <Switch>
+      <Route exact path="/" component={Home} />
+    </Switch>
+  </BrowserRouter>
 );
 export default App;

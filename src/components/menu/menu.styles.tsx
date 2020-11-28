@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { COLORS, FONTS, MOBILE_BREAKPOINT } from "../../assets/styles";
 
@@ -25,11 +26,12 @@ export default {
         rgba(255, 255, 255, 0.41) 99.98%
       );
     `,
-    Text: styled.div`
+    Text: styled(Link)`
       font-family: ${FONTS.SEGOE_UI};
       font-size: 16px;
       line-height: 21px;
       color: ${COLORS.NIMBLE_RED};
+      text-decoration: none;
     `,
     Icon: styled.img`
       margin-right: 19px;
