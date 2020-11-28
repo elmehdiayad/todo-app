@@ -8,7 +8,7 @@ interface Props {
   addTodo?(todo: TodoProps): void;
 }
 
-const TodoForm: FunctionComponent<Props> = ({ addTodo }) => {
+const TodoForm: FunctionComponent<Props> = () => {
   const [title, setTitle] = useState<string>("");
   const [description, setDescription] = useState<string>("");
 

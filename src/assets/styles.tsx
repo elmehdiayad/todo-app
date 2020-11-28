@@ -8,6 +8,8 @@ export const COLORS = {
   BLACK: "black",
   DARK_BLUE: "#37424a",
   GREY: "#707070",
+  GREEN: "rgba(57, 154, 113, 0.77);",
+  LIGHT_BLUE: "#ACB7C1",
 };
 
 export const FONTS = {

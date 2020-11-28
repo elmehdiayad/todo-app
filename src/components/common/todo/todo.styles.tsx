@@ -1,11 +1,24 @@
 import styled from "styled-components";
-import { COLORS, containerStyle, FONTS } from "../../../assets/styles";
+import {
+  COLORS,
+  containerStyle,
+  FONTS,
+  MOBILE_BREAKPOINT,
+} from "../../../assets/styles";
 
 export default {
   Container: styled.div`
     ${containerStyle}
+    flex-direction: row;
     padding: 16px;
     margin-bottom: 11px;
+  `,
+  LeftContainer: styled.div``,
+  RightContainer: styled.div`
+    margin-left: auto;
+    padding: 15px 0px 0px 50px;
+    display: flex;
+    flex-direction: column;
   `,
   Title: styled.div`
     font-family: ${FONTS.SEGOE_UI};
@@ -20,5 +33,17 @@ export default {
     font-size: 14px;
     line-height: 19px;
     color: ${COLORS.GREY};
+  `,
+  Button: styled.button<{ mode: "cancel" | "complete" }>`
+    width: 82px;
+    height: 28px;
+    background-color: ${(props) =>
+      props.mode === "cancel" ? "transparent" : COLORS.GREEN};
+    color: ${(props) =>
+      props.mode === "cancel" ? COLORS.LIGHT_BLUE : COLORS.WHITE};
+    padding: 4px 16px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
   `,
 };
