@@ -26,11 +26,10 @@ export const containerStyle = css`
 
 export const inputStyle = css`
   background: ${COLORS.LIGHT_GREY};
-  opacity: 0.6;
   border-radius: 4px;
   border: none;
   padding: 10px;
-  font-family: ${FONTS.AVENIR};
+  font-family: ${FONTS.SEGOE_UI};
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;

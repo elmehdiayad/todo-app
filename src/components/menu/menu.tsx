@@ -1,12 +1,20 @@
 import React, { FunctionComponent } from "react";
 import Styles from "./menu.styles";
-import home from "../../assets/images/home.svg";
 
-const Menu: FunctionComponent = () => (
+interface Props {
+  setShow?: any;
+}
+
+const Menu: FunctionComponent<Props> = ({ setShow }) => (
   <Styles.Container>
-    <Styles.MenuItem.Container>
-      <Styles.MenuItem.Icon src={home} alt="Accueil" />
-      <Styles.MenuItem.Text to="/">Accueil</Styles.MenuItem.Text>
+    <Styles.CloseMenu onClick={() => setShow(false)} />
+    <Styles.MenuItem.Container exact to="/">
+      <Styles.MenuItem.HomeIcon />
+      <Styles.MenuItem.Text>Accueil</Styles.MenuItem.Text>
+    </Styles.MenuItem.Container>
+    <Styles.MenuItem.Container to="/history">
+      <Styles.MenuItem.HistoryIcon />
+      <Styles.MenuItem.Text>History</Styles.MenuItem.Text>
     </Styles.MenuItem.Container>
   </Styles.Container>
 );

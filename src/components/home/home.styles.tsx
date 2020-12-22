@@ -11,7 +11,7 @@ export default {
     padding: 30px 120px;
     width: 100%;
     @media screen and (max-width: ${MOBILE_BREAKPOINT}px) {
-      padding: 30px;
+      padding: 15px;
     }
   `,
   Form: {
@@ -19,6 +19,9 @@ export default {
       ${containerStyle}
       padding: 17px 28px;
       margin-bottom: 22px;
+      @media screen and (max-width: ${MOBILE_BREAKPOINT}px) {
+        padding: 15px;
+      }
     `,
     TitleInput: styled.input`
       ${inputStyle}
@@ -48,5 +51,8 @@ export default {
   Todos: styled.div`
     ${containerStyle}
     padding: 25px;
+    @media screen and (max-width: ${MOBILE_BREAKPOINT}px) {
+      padding: 10px;
+    }
   `,
 };

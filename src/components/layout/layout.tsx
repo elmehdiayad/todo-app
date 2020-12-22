@@ -7,7 +7,9 @@ const Layout: FunctionComponent = ({ children }) => (
   <>
     <Header />
     <Styles.Body>
-      <Menu />
+      <Styles.WebMenu>
+        <Menu />
+      </Styles.WebMenu>
       {children}
     </Styles.Body>
   </>

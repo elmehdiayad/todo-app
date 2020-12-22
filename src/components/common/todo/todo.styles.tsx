@@ -12,6 +12,9 @@ export default {
     flex-direction: row;
     padding: 16px;
     margin-bottom: 11px;
+    @media screen and (max-width: ${MOBILE_BREAKPOINT}px) {
+      padding: 15px 8px;
+    }
   `,
   LeftContainer: styled.div``,
   RightContainer: styled.div`
@@ -19,6 +22,9 @@ export default {
     padding: 15px 0px 0px 50px;
     display: flex;
     flex-direction: column;
+    @media screen and (max-width: ${MOBILE_BREAKPOINT}px) {
+      flex-direction: row;
+    }
   `,
   Title: styled.div`
     font-family: ${FONTS.SEGOE_UI};

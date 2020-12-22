@@ -24,7 +24,7 @@ const TodoForm: FunctionComponent<Props> = () => {
 
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    dispatch({ type: "todos/todoAdded", payload: { title, description } });
+    dispatch({ type: "todos/add", payload: { title, description } });
     setTitle("");
     setDescription("");
   };
